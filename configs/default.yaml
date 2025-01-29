@@ -1,0 +1,34 @@
+# Content: Default configuration file for training the TinySora model with text-to-video diffusion
+
+training_data_dir: "./training_data"  # Directory containing training data (text and video frames)
+
+model:
+  dim: 64  # Dimensionality of the model (embedding size)
+  use_bert_text_cond: True  # Enables BERT-based text conditioning for model input
+  dim_mults: [1, 2, 4, 8]  # Scaling factors for each model block (increasing depth)
+  init_dim: null  # Initial dimension, not specified (default is None)
+  init_kernel_size: 7  # Kernel size for initial layers (often used for convolutional layers)
+  use_sparse_linear_attn: True  # Enables sparse attention mechanism for efficiency
+  block_type: "basic"  # Type of model block (e.g., 'basic', 'resnet', etc.)
+
+diffusion:
+  image_size: 32    # Height and width of the video frames
+  num_frames: 5     # Number of frames in the video (sequence length)
+  timesteps: 10   # Number of diffusion timesteps used during training
+  loss_type: "l1"   # Loss function for optimization ('l1' means L1 loss)
+  use_dynamic_thres: False  # Whether to use dynamic thresholding during training
+  dynamic_thres_percentile: 0.9  # Threshold percentile used for dynamic thresholding
+
+trainer:
+  ema_decay: 0.995  # Exponential moving average decay rate for model weights
+  train_batch_size: 2  # Number of samples per batch during training
+  train_lr: 0.0001  # Learning rate for training
+  train_num_steps: 10000  # Total number of training steps (epochs)
+  gradient_accumulate_every: 1  # How often to accumulate gradients (1 means no accumulation)
+  amp: False  # Whether to use automatic mixed precision for training (default: False)
+  step_start_ema: 2000  # Step at which to start applying EMA smoothing
+  update_ema_every: 10  # Frequency of updating EMA weights (every 10 steps)
+  save_model_every: 10  # Save model every 10 steps
+  results_folder: "./saved_models"  # Folder where results (models, samples) are saved
+  num_sample_rows: 4  # Number of rows to display during sampling (visualization)
+  max_grad_norm: null  # Maximum gradient norm for clipping (null means no clipping)
