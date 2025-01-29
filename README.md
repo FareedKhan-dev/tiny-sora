@@ -80,7 +80,7 @@ Make sure you have a basic understanding of object-oriented programming (OOP), n
 
 The codebase is organized as follows:
 ```bash
-train-tiny-sora/
+train-text2video-scratch/
 ├── configs/
 │   └── default.yaml          # Configuration file for training parameters and hyperparameters
 ├── src/
