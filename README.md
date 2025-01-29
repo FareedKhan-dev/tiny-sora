@@ -117,15 +117,15 @@ train-tiny-sora/
 
 Clone the repository and navigate to the directory:
 ```bash
-git clone https://github.com/FareedKhan-dev/tiny-sora.git
-cd tiny-sora
+git clone https://github.com/FareedKhan-dev/train-text2video-scratch.git
+cd train-text2video-scratch
 ```
 
 if you encounter any issues regarding the imports, make sure to change pythonpath to the root directory of the project:
 ```bash
-export PYTHONPATH="${PYTHONPATH}:/path/to/tiny-sora"
+export PYTHONPATH="${PYTHONPATH}:/path/to/train-text2video-scratch"
 
-# or if you are already in the train-llm-from-scratch directory
+# or if you are already in the train-text2video-scratch directory
 export PYTHONPATH="$PYTHONPATH:."
 ```
 
