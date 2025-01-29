@@ -3,7 +3,7 @@
 <div align="center">
 
 <!-- omit in toc -->
-# Train Tiny SORA
+# Train Tiny Text to Video Model
   
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![Contributions](https://img.shields.io/badge/Contributions-Welcome-blue) ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Transformers-green) ![PyTorch](https://img.shields.io/badge/PyTorch->=1.9.0-yellow) ![Lightning AI](https://img.shields.io/badge/Lightning%20AI-For%20GPU%20Resources-red)
 
